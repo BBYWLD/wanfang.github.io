@@ -21,19 +21,6 @@ ul,li {
   list-style: none;
 }
 
-div.centBox {
-  max-width: 1440px !important;
-  min-width: 480px;
-  margin: 0 auto;
-}
-
-div.centbox {
-  max-width: 1200px !important;
-  min-width: 480px;
-  margin: 0 auto;
-  position: relative;
-}
-
 div.head {
   width: 100vw;
   height: 84px;
@@ -46,6 +33,7 @@ div.head > .centBox {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-shrink: 0;
 }
 
 div.head > .centBox > div  {
@@ -53,6 +41,7 @@ div.head > .centBox > div  {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 div.head .logo {
@@ -173,6 +162,7 @@ div.main .centbox {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 div.main .nav {
@@ -893,6 +883,7 @@ div.footer .top {
   zoom: 1;
   color: #323232;
   font-size: 14px;
+  flex-shrink: 0;
 }
 
 div.footer .top .small {
@@ -985,6 +976,7 @@ div.footer .top .pop > div img:hover + div.pop-panel {
 div.footer .bottom {
   display: flex;
   flex-wrap: nowrap;
+  flex-shrink: 0;
 }
 
 div.footer .bottom > div {
@@ -1419,7 +1411,7 @@ div.btns > div label p svg {
   width: 65%
 }
 
-div.btns > div:hover svg path {
+div.btns > div:hover label svg path {
   fill: rgb(255, 193, 88);
 }
 
@@ -1506,12 +1498,40 @@ div.btns > div {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1700px) {
-  div.main > div.centBox > div.container {
-    width: 1400px !important;
+@media screen and (min-width: 1500px) {
+  div.centBox {
+    max-width: 1440px;
+    min-width: 480px;
+    margin: 0 auto;
   }
 
-  div.main > div.centBox > div.container div.btns span.linkText {
+  div.centbox {
+    max-width: 1440px;
+    min-width: 480px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  span.linkText {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1499px) {
+  div.centBox {
+    max-width: 1440px;
+    min-width: 480px;
+    margin: 0 auto;
+  }
+
+  div.centbox {
+    max-width: 1200px;
+    min-width: 480px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  span.linkText {
     display: none;
   }
 }
