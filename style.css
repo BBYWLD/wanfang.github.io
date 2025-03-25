@@ -8,13 +8,27 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgb(243, 244, 247);
-  font-family: Microsoft YaHei, SimSun !important;
+  font-family: var(--simplified);
+  transition: font-family .2s ease;
+}
+
+:root {
+  --simplified: Microsoft YaHei, SimSun;
+  --traditional: Microsoft JhengHei, Noto Sans TC;
 }
 
 a {
   text-decoration: none;
   color: inherit;
   font-family: inherit;
+}
+
+a.active {
+  color: #000;
+}
+
+.traditional-mode {
+  font-family: var(--traditional) !important;
 }
 
 ul,li {
